@@ -1,0 +1,13 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Environments & secrets
+.env
+.venv/
+venv/
+
+# Database & collected static
+db.sqlite3
+db.sqlite3-*
+staticfiles/

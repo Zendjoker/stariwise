@@ -1,0 +1,26 @@
+# Backups (kept locally, not pushed)
+backups/
+
+# Django backend
+backend/.venv/
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.py[cod]
+backend/.env
+backend/db.sqlite3
+backend/db.sqlite3-*
+backend/staticfiles/
+backend/media/
+backend/logs/
+
+# Next.js frontend
+nextjs/node_modules/
+nextjs/.next/
+nextjs/next-env.d.ts
+nextjs/*.tsbuildinfo
+nextjs/npm-debug.log*
+
+# OS / editor
+.DS_Store
+*.swp

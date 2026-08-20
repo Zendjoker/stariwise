@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="refresh" content="60" />
+  <title>Stairwise — Leads</title>
+  <style>
+    :root { --green:#123F36; --accent:#4C9A3C; --grey:#F5F6F4; --border:#E2E5E0; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--green); background:var(--grey); }
+    header { background:var(--green); color:#fff; padding:1.1rem 1.25rem; position:sticky; top:0; }
+    header h1 { margin:0; font-size:1.1rem; }
+    .wrap { max-width:1100px; margin:0 auto; padding:1.25rem; }
+    .stats { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem; }
+    .stat { background:#fff; border:1px solid var(--border); border-radius:12px; padding:1rem 1.4rem; flex:1 1 160px; }
+    .stat b { display:block; font-size:2rem; line-height:1; color:var(--accent); }
+    .stat span { font-size:.85rem; opacity:.7; }
+    h2 { font-size:1rem; margin:1.5rem 0 .75rem; }
+    table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; font-size:.85rem; }
+    th, td { text-align:left; padding:.6rem .75rem; border-bottom:1px solid var(--border); vertical-align:top; }
+    th { background:#eef1ec; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; }
+    tr:last-child td { border-bottom:none; }
+    .pill { display:inline-block; padding:.1rem .5rem; border-radius:999px; font-size:.72rem; font-weight:600; background:#e6f0e2; color:var(--accent); }
+    .muted { opacity:.55; }
+    a { color:var(--accent); }
+    @media (max-width:640px){ th:nth-child(4),td:nth-child(4){display:none;} }
+  </style>
+</head>
+<body>
+  <header><h1>Stairwise — Leads dashboard</h1></header>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>{{ contact_count }}</b><span>Quote requests</span></div>
+      <div class="stat"><b>{{ new_count }}</b><span>New / not contacted</span></div>
+      <div class="stat"><b>{{ lead_count }}</b><span>Discount signups</span></div>
+    </div>
+
+    <h2>Quote requests</h2>
+    <table>
+      <tr><th>When</th><th>Name</th><th>Service</th><th>Contact</th><th>Route</th><th>Status</th></tr>
+      {% for c in contacts %}
+      <tr>
+        <td class="muted">{{ c.created_at|date:"M j, H:i" }}</td>
+        <td><strong>{{ c.name }}</strong>{% if c.notes %}<br><span class="muted">{{ c.notes|truncatechars:80 }}</span>{% endif %}</td>
+        <td>{{ c.service|default:"—" }}</td>
+        <td>{% if c.phone %}<a href="tel:{{ c.phone }}">{{ c.phone }}</a>{% endif %}{% if c.email %}<br><a href="mailto:{{ c.email }}">{{ c.email }}</a>{% endif %}</td>
+        <td class="muted">{{ c.moving_from|default:"—" }} → {{ c.moving_to|default:"—" }}</td>
+        <td><span class="pill">{{ c.get_status_display }}</span></td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="6" class="muted">No quote requests yet.</td></tr>
+      {% endfor %}
+    </table>
+
+    <h2>Discount signups</h2>
+    <table>
+      <tr><th>When</th><th>Email</th><th>Source</th></tr>
+      {% for l in leads %}
+      <tr>
+        <td class="muted">{{ l.created_at|date:"M j, H:i" }}</td>
+        <td><a href="mailto:{{ l.email }}">{{ l.email }}</a></td>
+        <td class="muted">{{ l.source|default:"—" }}</td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="3" class="muted">No signups yet.</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+</body>
+</html>
