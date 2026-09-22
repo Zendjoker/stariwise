@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Reviews — What San Francisco Says About Stairwise",
+  title: "Reviews: What San Francisco Says About Stairwise",
   description:
-    "Read Stairwise customer reviews from across San Francisco — moving, heavy lifting, furniture assembly, cleaning, and junk removal jobs done right.",
+    "Read Stairwise customer reviews from across San Francisco: moving, heavy lifting, furniture assembly, cleaning, and junk removal jobs done right.",
   alternates: { canonical: "https://gostairwise.com/reviews" },
   robots: "index, follow",
   openGraph: {
     type: "website",
-    title: "Reviews — What San Francisco Says About Stairwise",
+    title: "Reviews: What San Francisco Says About Stairwise",
     description: "Customer reviews from San Francisco moving, heavy lifting, and furniture assembly jobs.",
     url: "https://gostairwise.com/reviews",
     images: [{ url: "https://gostairwise.com/images/hero.webp" }],
@@ -28,7 +28,7 @@ const REVIEWS = [
   { name: "Camille D.", loc: "Noe Valley", job: "Move-out cleaning", quote: "Used them for a move-out clean on a short deadline. Kitchen and bathrooms were spotless, got our full deposit back. Would book again without thinking twice." },
   { name: "Jordan M.", loc: "Mission District", job: "Junk removal", quote: "Cleared out a garage full of old furniture and appliances in under two hours. Quoted upfront, no surprise fees when the truck was full." },
   { name: "Sana F.", loc: "Russian Hill", job: "Heavy lifting, gym equipment", quote: "Needed a squat rack and full home gym moved down three flights of narrow stairs. They came with the right equipment and didn't scratch a single wall." },
-  { name: "Theo B.", loc: "Financial District", job: "Office relocation", quote: "Moved our 12-person office over a weekend — desks, monitors, filing cabinets, all reassembled and labeled by Monday morning. Zero downtime for the team." },
+  { name: "Theo B.", loc: "Financial District", job: "Office relocation", quote: "Moved our 12-person office over a weekend, desks, monitors, filing cabinets, all reassembled and labeled by Monday morning. Zero downtime for the team." },
   { name: "Renee K.", loc: "Cow Hollow", job: "Furniture assembly & mounting", quote: "Assembled a wardrobe, a crib, and mounted two TVs in one visit. Careful with the walls, cleaned up all the packaging, and were done in about three hours." },
 ];
 
@@ -40,7 +40,7 @@ export default function ReviewsPage() {
           <Reveal className="hero-copy" style={{ maxWidth: 760 }}>
             <h1 id="reviews-page-heading">What San Francisco says about Stairwise.</h1>
             <p className="hero-sub" style={{ maxWidth: "60ch" }}>
-              Real jobs across the city — moving, heavy lifting, furniture assembly, cleaning,
+              Real jobs across the city: moving, heavy lifting, furniture assembly, cleaning,
               junk removal, and office relocations. Here&apos;s what customers told us afterward.
             </p>
           </Reveal>
@@ -48,12 +48,12 @@ export default function ReviewsPage() {
       </section>
 
       <section aria-labelledby="reviews-list-heading">
-        <div className="wrap">
+        <div className="wrap wrap-wide">
           <Reveal className="section-head center">
             <p className="eyebrow">Job by job</p>
             <h2 id="reviews-list-heading">Recent customer reviews.</h2>
           </Reveal>
-          <div className="cards-3">
+          <div className="reviews-grid">
             {REVIEWS.map(({ name, loc, job, quote }) => (
               <Reveal key={name + job} as="figure" className="review-card">
                 <div className="stars" aria-label="Five out of five stars">

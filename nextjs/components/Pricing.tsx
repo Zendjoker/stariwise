@@ -73,14 +73,14 @@ export default function Pricing() {
             <div className="calc-head">
               <p className="eyebrow">Estimate your job</p>
               <h3>Live pricing calculator</h3>
-              <p>Pick a service, choose your crew size and hours — discounts apply automatically. 3-mover crews save 10%, 4-mover crews save 20%.</p>
+              <p>Pick a service, choose your crew size and hours. Discounts apply automatically: 3-mover crews save 10%, 4-mover crews save 20%.</p>
             </div>
 
             <div className="field">
               <label htmlFor="calcService">Service</label>
               <select id="calcService" value={service} onChange={e => setService(e.target.value)}>
                 {Object.entries(RATES).map(([name, rate]) => (
-                  <option key={name} value={name}>{name} — ${rate} / person / hr</option>
+                  <option key={name} value={name}>{name} (${rate} / person / hr)</option>
                 ))}
               </select>
             </div>
@@ -115,15 +115,15 @@ export default function Pricing() {
         </Reveal>
 
         <div className="pricing-promise">
-          <ul className="promise-list reveal">
+          <Reveal as="ul" className="promise-list">
             {[
-              { strong: "No stair fees, ever.", body: "Steep hills and four-flight walk-ups are what we're built for — you're never charged extra for them." },
+              { strong: "No stair fees, ever.", body: "Steep hills and four-flight walk-ups are what we're built for, so you're never charged extra for them." },
               { strong: "No long-carry or fuel surcharges.", body: "Distance from the truck to your door is on us, and so is the gas to get there." },
               { strong: "The quote is the price.", body: "We confirm the rate before we begin. No rounding up, no line-item surprises at the end." },
             ].map(({ strong, body }) => (
               <li key={strong}><ShieldCheck /><span><strong>{strong}</strong> {body}</span></li>
             ))}
-          </ul>
+          </Reveal>
           <Reveal className="payment-box">
             <h3>Accepted payment methods</h3>
             <p>All major credit and debit cards (Visa, Mastercard, Amex, Discover), cash, Zelle, Apple Pay, and Venmo. Payment collected after the job is complete. A receipt is provided every time.</p>

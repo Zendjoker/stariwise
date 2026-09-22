@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import PromoModal from "@/components/PromoModal";
 import Lightbox from "@/components/Lightbox";
+import CalendlyBadge from "@/components/CalendlyBadge";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -16,7 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Stairwise — Movers, Heavy Lifting & Furniture Assembly in San Francisco",
+  title: "Stairwise: Movers, Heavy Lifting & Furniture Assembly in San Francisco",
   description:
     "Stairwise is a San Francisco moving, heavy lifting, and furniture assembly company. Sure-footed on steep hills, walk-ups, and narrow Victorian staircases. Upfront pricing. Call (415) 724-8720.",
   keywords:
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Stairwise",
-    title: "Stairwise — Movers, Heavy Lifting & Furniture Assembly in San Francisco",
+    title: "Stairwise: Movers, Heavy Lifting & Furniture Assembly in San Francisco",
     description:
       "San Francisco's moving, heavy lifting & furniture assembly crew. Full-service for hills, walk-ups, and narrow staircases. Upfront pricing.",
     url: "https://gostairwise.com/",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stairwise — San Francisco Movers, Lifting & Furniture Assembly",
+    title: "Stairwise: San Francisco Movers, Lifting & Furniture Assembly",
     description: "San Francisco's moving, heavy lifting & furniture assembly crew. Upfront pricing. Call (415) 724-8720.",
     images: ["https://gostairwise.com/images/hero.webp"],
   },
@@ -87,6 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={poppins.className}>
       <head>
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -101,6 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ScrollToTop />
           <PromoModal />
           <Lightbox />
+          <CalendlyBadge />
         </AuthProvider>
       </body>
     </html>

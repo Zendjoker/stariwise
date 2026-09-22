@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Stairwise",
+  title: "Privacy Policy: Stairwise",
   description:
     "Privacy Policy for Stairwise, a San Francisco moving, heavy lifting, and furniture assembly company.",
   alternates: { canonical: "https://gostairwise.com/privacy" },

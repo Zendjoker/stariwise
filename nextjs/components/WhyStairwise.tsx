@@ -14,7 +14,7 @@ export default function WhyStairwise() {
           {[
             { title: "Steep hills", body: "We stage the truck, chock the wheels, and carry with control on the grades that make Muni brakes squeal." },
             { title: "Four-flight walk-ups", body: "No elevator, no problem. We pace the crew, protect the treads, and keep every trip up and down safe." },
-            { title: "Narrow Victorian staircases", body: "Tight winders and low landings need angles, patience, and hoisting straps — all things we bring standard." },
+            { title: "Narrow Victorian staircases", body: "Tight winders and low landings need angles, patience, and hoisting straps, all things we bring standard." },
             { title: "Tight doorways & parking", body: "We measure doorframes, remove doors when needed, and handle street parking and temporary permit rules." },
           ].map(({ title, body }) => (
             <Reveal key={title} className="feature-block">
@@ -26,7 +26,7 @@ export default function WhyStairwise() {
         </div>
 
         <Reveal>
-          <p className="goat-tie">Sure-footed on the terrain nobody else wants — the same instinct that keeps a mountain goat steady on a cliff keeps our crew steady on your stairs.</p>
+          <p className="goat-tie">Sure-footed on the terrain nobody else wants, the same instinct that keeps a mountain goat steady on a cliff keeps our crew steady on your stairs.</p>
         </Reveal>
       </div>
     </section>

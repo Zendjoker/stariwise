@@ -50,7 +50,7 @@ export default function AuthModal({
         <div className="auth-header">
           <div className="auth-logo">🪜</div>
           <h2 className="nh-modal-title">{mode === "login" ? "Welcome back" : "Create your account"}</h2>
-          <p className="nh-modal-sub">{mode === "login" ? "Sign in to post tasks or apply as a helper." : "Join the SF helper network — post tasks or become a helper."}</p>
+          <p className="nh-modal-sub">{mode === "login" ? "Sign in to post tasks or apply as a helper." : "Join the SF helper network: post tasks or become a helper."}</p>
         </div>
 
         <form onSubmit={submit} noValidate>

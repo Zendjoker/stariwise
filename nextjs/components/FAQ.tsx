@@ -4,8 +4,8 @@ import Reveal from "./Reveal";
 
 const FAQS = [
   { q: "How does your pricing work?", a: "All services are billed per person, per hour. Rates are: Moving Help $55, Furniture Assembly $62, Heavy Lifting $65, Cleaning $65, and Trash & Junk Removal $29. Junk removal also carries disposal fees that are always quoted upfront. There are no extra charges for stairs, long carries, or fuel." },
-  { q: "Are you insured?", a: "Yes. Stairwise carries liability and cargo insurance on every job. We're happy to provide a certificate of insurance for your building on request — just ask when you book." },
-  { q: "Do you charge extra for stairs and walk-ups?", a: "Never. Stairs and walk-ups are exactly what Stairwise is built for. Steep San Francisco hills, four-flight climbs, and narrow Victorian staircases are all included in your hourly rate — no surprise surcharges." },
+  { q: "Are you insured?", a: "Yes. Stairwise carries liability and cargo insurance on every job. We're happy to provide a certificate of insurance for your building on request, just ask when you book." },
+  { q: "Do you charge extra for stairs and walk-ups?", a: "Never. Stairs and walk-ups are exactly what Stairwise is built for. Steep San Francisco hills, four-flight climbs, and narrow Victorian staircases are all included in your hourly rate. No surprise surcharges." },
   { q: "Can you assemble furniture without a move?", a: "Absolutely. Furniture assembly is a standalone service. Whether it's a single flat-pack wardrobe or a full apartment of new furniture, we'll build it, level it, mount what needs mounting, and remove all the packaging." },
   { q: "How far ahead should I schedule?", a: "Booking a few days ahead is ideal, but we keep same-day and next-day slots open across the city. Call or request a quote and we'll tell you exactly what's available." },
   { q: "What payment methods do you accept?", a: "We accept all major credit and debit cards (Visa, Mastercard, American Express, Discover), cash, Zelle, Apple Pay, and Venmo. Payment is collected only after the job is complete, and you'll always get a receipt." },

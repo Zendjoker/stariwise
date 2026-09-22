@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Stairwise",
+  title: "Terms of Service: Stairwise",
   description:
     "Terms of Service for Stairwise, a San Francisco moving, heavy lifting, and furniture assembly company.",
   alternates: { canonical: "https://gostairwise.com/terms" },

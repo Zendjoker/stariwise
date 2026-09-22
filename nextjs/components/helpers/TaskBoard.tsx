@@ -164,7 +164,7 @@ export default function TaskBoard(){
             <div className="nh-empty">
               <div style={{fontSize:"2.5rem",marginBottom:".8rem"}}>🔍</div>
               <strong>No open tasks right now</strong>
-              <p>Be the first — post yours and helpers will see it immediately.</p>
+              <p>Be the first: post yours and helpers will see it immediately.</p>
               <button className="btn btn-primary btn-lg" style={{marginTop:"1.2rem"}} onClick={handlePost}>Post a task</button>
             </div>
           ):(

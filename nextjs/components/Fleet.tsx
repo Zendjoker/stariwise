@@ -7,7 +7,7 @@ export default function Fleet() {
         <Reveal className="section-head">
           <p className="eyebrow">Fleet &amp; team</p>
           <h2 id="fleet-heading">A deep bench, sized to your job.</h2>
-          <p>Enough crews and the right vans to match any move — from a single heavy item to a full-home haul — with the availability to get there fast.</p>
+          <p>Enough crews and the right vans to match any move, from a single heavy item to a full-home haul, with the availability to get there fast.</p>
         </Reveal>
 
         <div className="fleet-grid">
@@ -20,7 +20,7 @@ export default function Fleet() {
           <Reveal className="fleet-stat">
             <span className="fleet-num">5<span>+</span></span>
             <h3>Years average experience</h3>
-            <p>In moving, cleaning, assembly, and junk removal — seasoned hands on every job.</p>
+            <p>In moving, cleaning, assembly, and junk removal. Seasoned hands on every job.</p>
           </Reveal>
 
           <Reveal className="fleet-card">
@@ -28,7 +28,7 @@ export default function Fleet() {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
             </span>
             <h3>Vans sized to the job</h3>
-            <p>Small, medium, and large vans on hand — we bring the right size so you never pay for space you don&apos;t need.</p>
+            <p>Small, medium, and large vans on hand, we bring the right size so you never pay for space you don&apos;t need.</p>
           </Reveal>
 
           <Reveal className="fleet-card">

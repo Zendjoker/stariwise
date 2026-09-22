@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Stairwise — San Francisco Movers & Heavy Lifting",
+    name: "Stairwise: San Francisco Movers & Heavy Lifting",
     short_name: "Stairwise",
     description:
       "San Francisco moving, heavy lifting, and furniture assembly. Sure-footed on hills, walk-ups, and narrow staircases.",

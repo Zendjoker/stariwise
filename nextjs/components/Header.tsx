@@ -16,6 +16,13 @@ export default function Header() {
 
   return (
     <header className={`site-header${scrolled ? " scrolled" : ""}`} id="top">
+      <div className="header-topbar">
+        <div className="wrap header-topbar-inner">
+          <span>Open 7 days, 7am to 8pm</span>
+          <a href="mailto:hello@gostairwise.com">hello@gostairwise.com</a>
+        </div>
+      </div>
+
       <div className="wrap header-inner">
         <Link href="/" className="brand" aria-label="Stairwise home">
           <span className="logotype">stair<span className="wise">wise</span></span>

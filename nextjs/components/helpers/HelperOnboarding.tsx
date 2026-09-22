@@ -101,7 +101,7 @@ export default function HelperOnboarding({ onClose, onDone }: { onClose: () => v
                 <div className="field nh-full">
                   <label htmlFor="ho-bio">Bio <span style={{ color: "#DC2626" }}>*</span></label>
                   <textarea id="ho-bio" rows={3} value={bio} onChange={e => setBio(e.target.value)}
-                    placeholder="Tell task posters about yourself — your background, reliability, anything that makes you a great helper." />
+                    placeholder="Tell task posters about yourself: your background, reliability, anything that makes you a great helper." />
                 </div>
                 <div className="field nh-full">
                   <label htmlFor="ho-exp">Experience</label>

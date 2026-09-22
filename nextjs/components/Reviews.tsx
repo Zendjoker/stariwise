@@ -14,13 +14,13 @@ const REVIEWS = [
 export default function Reviews() {
   return (
     <section className="bg-grey" aria-labelledby="reviews-heading">
-      <div className="wrap">
+      <div className="wrap wrap-wide">
         <Reveal className="section-head center">
           <p className="eyebrow">In their words</p>
           <h2 id="reviews-heading">What San Francisco says.</h2>
         </Reveal>
 
-        <div className="cards-3">
+        <div className="reviews-grid">
           {REVIEWS.map(({ name, loc, job, quote }) => (
             <Reveal key={name} as="figure" className="review-card">
               <div className="stars" aria-label="Five out of five stars">

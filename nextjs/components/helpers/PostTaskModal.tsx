@@ -30,7 +30,7 @@ export default function PostTaskModal({onClose,onPosted}:{onClose:()=>void;onPos
       })});
       const res=await r.json();
       if(res.ok){setDone(res.manage_url);onPosted();}else{setError(res.error||"Failed.");}
-    }catch{setError("Network error — try again.");}
+    }catch{setError("Network error, try again.");}
     setLoading(false);
   }
 
@@ -89,7 +89,7 @@ export default function PostTaskModal({onClose,onPosted}:{onClose:()=>void;onPos
                 </>)}
               </div>
               {error&&<p className="nh-error">{error}</p>}
-              <p className="form-note" style={{marginTop:".5rem"}}>Your contact info is only shared with helpers who apply — not shown publicly.</p>
+              <p className="form-note" style={{marginTop:".5rem"}}>Your contact info is only shared with helpers who apply, not shown publicly.</p>
               <button type="submit" className="btn btn-primary btn-lg" style={{width:"100%",marginTop:"1rem"}} disabled={loading}>
                 {loading?"Posting…":"Post task"}
               </button>
